@@ -1,0 +1,16 @@
+{
+    "name": "conticket-frontend",
+    "dependencies": {
+      "jade": "*",
+      "coffee" : "*"
+    },
+    "devDependencies": {
+        "gulp": "*",
+        "gulp-util": "*",
+        "gulp-watch": "*",
+        "gulp-uglify": "*",
+        "gulp-coffee": "*",
+        "gulp-concat": "*",
+        "gulp-jade": "*"
+    }
+}
