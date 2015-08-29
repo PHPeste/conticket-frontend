@@ -7,34 +7,23 @@ var gulp   = require('gulp'),
     jade   = require('gulp-jade');
 
 gulp.task('jade', function() {
-  gulp.src('templates/**/*.jade')
+  gulp.src('src/assets/templates/layout/pages/*.jade')
   .pipe(jade({
     pretty: !util.env.production
   }))
-  .pipe(gulp.dest('html'));
-});
-
-gulp.task('uglify', function() {
-  gulp.src('scripts/*.js')
-  .pipe(uglify())
-  .pipe(gulp.dest('scripts'))
+  .pipe(gulp.dest('build'));
 });
 
 gulp.task('coffee', function() {
-  gulp.src('coffee/**/*.coffee')
-  .pipe(coffee())
-  .pipe(uglify())
+  gulp.src('src/coffee/**/*.coffee')
+  .pipe(coffee({bare: true}))
+  // .pipe(uglify())
   .pipe(concat('scripts.js'))
-  .pipe(gulp.dest('scripts'));
+  .pipe(gulp.dest('build/assets/js'));
 });
 
-gulp.task('concat', function() {
-  return gulp.src('scripts/**/*.js')
-    .pipe(concat())
-    .pipe(gulp.dest('build/app.js'))
-});
 
 gulp.task('watch', function() {
-  gulp.watch(['templates/**/*.jade'], ['jade']);
-  gulp.watch(['coffee/**/*.coffee'], ['coffee']);
+  gulp.watch(['src/assets/templates/layout/**/*.jade'], ['jade']);
+  gulp.watch(['src/assets/coffee/**/*.coffee'], ['coffee']);
 });

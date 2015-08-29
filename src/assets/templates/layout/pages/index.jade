@@ -1,6 +1,8 @@
-include head.jade
-include header.jade
+include ../base/head.jade
+include ../base/header.jade
 body(ng-app="ConticketApp")
   .content(ng-controller="DefaultCtrl")
     input(type="text" ng-model="nome")
-include footer.jade
+    h1 {{nome}}
+
+include ../base/footer.jade

@@ -1,4 +1,4 @@
-angular.module "ConticketApp", []
+angular.module "ConticketApp"
 .controller 'DefaultCtrl', [
   '$scope'
   ($scope)->
