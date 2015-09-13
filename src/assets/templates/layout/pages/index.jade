@@ -1,8 +1,17 @@
 include ../base/head.jade
-include ../base/header.jade
-body(ng-app="ConticketApp")
-  .content(ng-controller="DefaultCtrl")
-    input(type="text" ng-model="nome")
-    h1 {{nome}}
+md-content
+  include ../base/header.jade
+  body(ng-app="ConticketApp")
+      md-content(ng-controller="DefaultCtrl" layout="column" layout-padding layout-fill)
+        div(class="inset")
+        div(class="card-container")
+          each n in [1, 2, 3, 4]
+            md-card
+              //- .md-card-header
+              md-card-content
+                div(class="md-card-detail")
+                  h2 PHPeste
+                  p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus veritatis sed saepe at vero quia adipisci, minus culpa provident magnam voluptatum eaque, blanditiis nulla illum. Doloribus inventore repudiandae officiis dolores?
+                  md-button(class="md-primary h-buy-ticket" href="evento.html") Comprar ingresso
 
 include ../base/footer.jade

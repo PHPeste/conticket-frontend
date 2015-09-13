@@ -1,0 +1,33 @@
+include ../base/head.jade
+md-content
+  include ../base/header.jade
+  body(ng-app="ConticketApp")
+      md-content(ng-controller="DefaultCtrl" layout="column" layout-padding layout-fill)
+        .inset
+        div(layout="column" layout-padding).event-container.md-whiteframe-z2
+          img(class="img-responsible" src="http://placephant.com/955/251")
+          section(class="content-padding")
+            div(layout="row")
+              div(flex="60")
+                h2 PHPeste
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus veritatis sed saepe at vero quia adipisci, minus culpa provident magnam voluptatum eaque, blanditiis nulla illum. Doloribus inventore repudiandae officiis dolores?
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat quasi harum mollitia explicabo, consequatur, necessitatibus a similique tempore fugit non quibusdam quod molestiae in nemo vel asperiores dicta ut minima.
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero cupiditate nostrum illum hic cumque officiis nihil accusamus nisi perferendis dignissimos, sed fugit quis optio, sapiente, est ducimus dicta blanditiis enim!
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero cupiditate nostrum illum hic cumque officiis nihil accusamus nisi perferendis dignissimos, sed fugit quis optio, sapiente, est ducimus dicta blanditiis enim!
+              div(flex="40")
+                //- md-button.md-primary Comprar ingresso
+                ul.order-detail-popup
+                  li.item.item-header
+                    h3 Ingressos
+                  for n in [1, 2, 3, 4, 5]
+                    li.item
+                      div(layout="row")
+                        //- ng-md-icon(icon="label" flex="25").item-icon
+                        md-checkbox(flex="75" class="checkbox-item md-align-top-left")
+                          span Entrada para o dia..
+                        div(flex=25) R$ 99,00
+                  li.item
+                    md-button(class="e-button-order md-primary" href="/#comprar") Comprar
+
+
+include ../base/footer.jade

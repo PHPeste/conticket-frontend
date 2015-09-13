@@ -1,5 +1,5 @@
-angular.module "ConticketApp", ['ngMaterial']
+angular.module "ConticketApp", ['ngMaterial', 'ngMdIcons']
 .config ($mdThemingProvider)->
   $mdThemingProvider.theme('default')
-    .primaryPalette('pink')
+    .primaryPalette('light-blue')
     .accentPalette('orange')

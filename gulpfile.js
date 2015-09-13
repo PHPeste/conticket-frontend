@@ -15,7 +15,7 @@ gulp.task('jade', function() {
 });
 
 gulp.task('coffee', function() {
-  gulp.src('src/coffee/**/*.coffee')
+  gulp.src('src/assets/coffee/**/*.coffee')
   .pipe(coffee({bare: true}))
   // .pipe(uglify())
   .pipe(concat('scripts.js'))
